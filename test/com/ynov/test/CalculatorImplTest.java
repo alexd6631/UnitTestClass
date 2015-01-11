@@ -15,16 +15,22 @@ public class CalculatorImplTest {
 
     @Test
     public void testSubstract() throws Exception {
-        assertFalse("Le test a échoué", true);
+        Calculator calculator = new CalculatorImpl();
+        assertEquals(5, calculator.substract(10, 5));
+        assertEquals(20, calculator.substract(10, -10));
     }
 
     @Test
     public void testMultiply() throws Exception {
-        throw new RuntimeException("Unexpected error");
+        Calculator calculator = new CalculatorImpl();
+        assertEquals(50, calculator.multiply(10, 5));
+        assertEquals(-100, calculator.multiply(10, -10));
     }
 
     @Test
     public void testDivide() throws Exception {
-
+        Calculator calculator = new CalculatorImpl();
+        assertEquals(2, calculator.divide(10, 5));
+        assertEquals(-1, calculator.divide(10, -10));
     }
 }
