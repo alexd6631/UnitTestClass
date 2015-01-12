@@ -38,11 +38,25 @@ public class CalculatorImplTest {
         try {
             calculator.divide(10, 0);
             fail("Divide doit renvoyer ArithmeticException lorsque le dénominateur est égal à zéro");
-        } catch (ArithmeticException ignored) {  }
+        } catch (ArithmeticException ignored) {
+        }
     }
 
     @Test(expected = ArithmeticException.class)
     public void testDivideByZero() throws Exception {
         calculator.divide(10, 0);
+    }
+
+    @Test
+    public void testSqrtInvariant() {
+        for (double x = 0; x < 10000000; x += 0.1) {
+            double root = calculator.sqrt(x);
+            assertEquals(x, root * root, 1e-6);
+        }
+    }
+
+    @Test
+    public void testNegativeSqrt() {
+        assertEquals(Double.NaN, calculator.sqrt(-1), 1e-9);
     }
 }
