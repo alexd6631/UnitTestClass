@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="0.0">com.ynov.test.cours2.di.components.OptionsParser</node>
+    <node x="0.0" y="308.0">com.ynov.test.cours2.di.models.NoteEleve</node>
+    <node x="292.0" y="308.0">com.ynov.test.cours2.di.models.StatistiqueEleve</node>
+    <node x="407.5" y="101.0">com.ynov.test.cours2.di.components.StatistiquesService</node>
+    <node x="427.0" y="0.0">com.ynov.test.cours2.di.components.NoteEleveReader</node>
+    <node x="670.0" y="0.0">com.ynov.test.cours2.di.components.StatistiquesEleveWriter</node>
+    <node x="235.0" y="0.0">com.ynov.test.cours2.di.components.Clock</node>
+    <node x="1003.0" y="0.0">com.ynov.test.cours2.di.components.StatistiquesCalculateur</node>
+    <node x="0.0" y="559.0">com.ynov.test.cours2.di.models.Options</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.ynov.test.cours2.di.components.StatistiquesService" target="com.ynov.test.cours2.di.components.OptionsParser">
+      <point x="-104.80000000000001" y="-81.0" />
+      <point x="433.7" y="81.0" />
+      <point x="107.5" y="81.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="com.ynov.test.cours2.di.components.StatistiquesService" target="com.ynov.test.cours2.di.components.Clock">
+      <point x="-52.39999999999998" y="-81.0" />
+      <point x="486.1" y="71.0" />
+      <point x="321.0" y="71.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="com.ynov.test.cours2.di.components.StatistiquesService" target="com.ynov.test.cours2.di.components.StatistiquesCalculateur">
+      <point x="104.79999999999995" y="-81.0" />
+      <point x="643.3" y="81.0" />
+      <point x="1179.5" y="81.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="com.ynov.test.cours2.di.components.StatistiquesService" target="com.ynov.test.cours2.di.components.NoteEleveReader">
+      <point x="0.0" y="-81.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="com.ynov.test.cours2.di.components.StatistiquesService" target="com.ynov.test.cours2.di.components.StatistiquesEleveWriter">
+      <point x="52.39999999999998" y="-81.0" />
+      <point x="590.9" y="71.0" />
+      <point x="826.5" y="71.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="678.0" y="338.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
