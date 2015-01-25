@@ -1,6 +1,5 @@
 package com.ynov.test.ex1;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -12,7 +11,7 @@ import static org.junit.Assert.*;
 public class MyDateTest {
 
     /**
-     * Test method for {@link MyDate#getDay()}.
+     * Test method for {@link com.ynov.test.ex1.MyDate#getDay()}.
      */
     @Test
     public void testGetDay() {

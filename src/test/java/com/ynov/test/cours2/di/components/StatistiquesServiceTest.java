@@ -1,6 +1,5 @@
 package com.ynov.test.cours2.di.components;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
