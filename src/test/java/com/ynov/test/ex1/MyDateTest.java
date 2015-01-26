@@ -65,6 +65,41 @@ public class MyDateTest {
         assertFalse(b);
     }
 
+    @Test
+    public void testA1() {
+        for (int day = 1; day <= 31; day++) {
+            for (int month = 1; month <= 12; month++) {
+                for (int year = 0; year <= 3000; year++) {
+                    boolean b = MyDate.isValidDate(day, month, year);
+                    assertTrue(b);
+                }
+            }
+        }
+    }
+
+    @Test
+    public void testB1() {
+        for (int day = 0; day > -3000; day--)
+        {
+            for (int month = 1; month <= 12; month++) {
+                for (int year = 0; year <= 3000; year++) {
+                    boolean b = MyDate.isValidDate(day, month, year);
+                    assertFalse(b);
+                }
+            }
+        }
+
+        for (int day = 32; day < 3000; day++)
+        {
+            for (int month = 1; month <= 12; month++) {
+                for (int year = 0; year <= 3000; year++) {
+                    boolean b = MyDate.isValidDate(day, month, year);
+                    assertFalse(b);
+                }
+            }
+        }
+    }
+
     /**
      * Test valid limit dates
      */

@@ -54,7 +54,7 @@ class MyDate {
 
     /**
      * Get the last day given a month and a year.
-     * 
+     *
      * @param      month   the month.
      * @param      year   the year.
      * @return the last day of (month, year), (should be 28, 29, 30 or 31)
@@ -110,7 +110,7 @@ class MyDate {
     }
 
     private static boolean checkDay(int day) {
-        return day >= 0 && day < 32;
+        return day > 0 && day < 32;
     }
 
     private static boolean checkMonth(int month) {

@@ -15,6 +15,12 @@ public class StatistiquesServiceTest {
     Clock clock;
 
     @Test
+    public void testVerify() {
+        clock.getCurrentTime();
+        verify(clock).getCurrentTime(); //On vérifie que getCurrentTime est appelée 1 fois
+    }
+
+    @Test
     public void testSimpleMock() {
         when(clock.getCurrentTime()).thenReturn(1234L);
         assertEquals(1234L, clock.getCurrentTime());
