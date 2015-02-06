@@ -31,9 +31,6 @@ import static org.mockito.Mockito.*;
 public class EchoTest {
 
 
-    @Rule
-    public ExpectedException thrown = ExpectedException.none();
-
     @Mock Echo mockEcho;
 
     @Test
@@ -66,28 +63,25 @@ public class EchoTest {
                 mockEcho.echo(new EchoRequest(), "0000"));
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void stubbingThrowExceptiton() {
         when(mockEcho.echo(null))
                 .thenThrow(new IllegalArgumentException());
-        thrown.expect(IllegalArgumentException.class);
         mockEcho.echo(null);
     }
 
-    @Test
+    @Test(expected = IllegalStateException.class)
     public void stubbingVoidMethods() {
         doThrow(IllegalStateException.class).when(mockEcho).echo();
-        thrown.expect(IllegalStateException.class);
         mockEcho.echo();
     }
 
-    @Test
+    @Test(expected = IllegalStateException.class)
     public void stubbingIteratorStyle() {
         when(mockEcho.echo("42"))
                 .thenReturn(echoResponse("0042"))
                 .thenThrow(IllegalStateException.class);
         assertEquals(echoResponse("0042"), mockEcho.echo("42"));
-        thrown.expect(IllegalStateException.class);
         mockEcho.echo("42");
     }
 
