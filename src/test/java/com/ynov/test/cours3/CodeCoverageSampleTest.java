@@ -16,17 +16,21 @@ public class CodeCoverageSampleTest {
 
     @Test
     public void fullLineCoverage() throws Exception {
-        assertEquals(110, sample.simpleMethod(true, true));
+        int res = sample.simpleMethod(true, true);
+		assertEquals(110, res);
     }
-
+//
     @Test
     public void fullBranchCoverage() {
-        assertEquals(0, sample.simpleMethod(false, false));
+        int res = sample.simpleMethod(false, false);
+		assertEquals(0, res);
     }
-    
+//    
     @Test
     public void fullPathCoverage() {
-    	 assertEquals(10, sample.simpleMethod(true, false));
-    	 assertEquals(100, sample.simpleMethod(false, true));
+    	 int res1 = sample.simpleMethod(true, false);
+		assertEquals(10, res1);
+    	 int res2 = sample.simpleMethod(false, true);
+		assertEquals(100, res2);
     }
 }

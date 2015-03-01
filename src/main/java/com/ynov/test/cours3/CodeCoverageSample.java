@@ -12,4 +12,8 @@ public class CodeCoverageSample {
         }
         return res;
     }
+    
+    public void untested() {
+    	System.out.println("I am untested");
+    }
 }

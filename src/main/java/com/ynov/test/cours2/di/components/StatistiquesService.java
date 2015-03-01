@@ -24,7 +24,9 @@ public class StatistiquesService {
     public void run(String[] args) throws Exception {
         Options options = parser.parseOptions(args);
         List<NoteEleve> noteEleves = reader.readNotes(options.getInFile());
-        List<StatistiqueEleve> statistiqueEleves = calculateur.calculStats(noteEleves, clock.getCurrentTime());
+        List<StatistiqueEleve> statistiqueEleves =
+                calculateur.calculStats(noteEleves,
+                                        clock.getCurrentTime());
         writer.writeStatistiques(statistiqueEleves, options.getOutFile());
     }
 }
