@@ -20,7 +20,6 @@ public abstract class ProcessManagerTest {
         //Contenant deux process p1, p2
         MyProcess p1 = new MyProcess("0001", 0);
         MyProcess p2 = new MyProcess("0002", 0);
-        MyProcess p3 = new MyProcess("0003", 0);
         processManager.queueProcess(p1);
         processManager.queueProcess(p2);
         //Lorsque je teste si p1 est contenu par le gestionnaire avec son id
@@ -38,8 +37,8 @@ public abstract class ProcessManagerTest {
         processManager.queueProcess(p1);
         processManager.queueProcess(p2);
         //Lorsque je teste si p3 est contenu par le gestionnaire
-        boolean res = processManager.isProcessQueued("0001");
+        boolean res = processManager.isProcessQueued("0003");
         //Alors le gestionnaire renvoit false
-        assertTrue(res);
+        assertFalse(res);
     }
 }
