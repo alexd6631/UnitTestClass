@@ -31,8 +31,10 @@ public class StatistiquesCalculateurImpl implements StatistiquesCalculateur {
         }
 
         List<StatistiqueEleve> statistiques = new ArrayList<StatistiqueEleve>();
-        for (int id : notesMapping.keySet()) {
-            List<NoteEleve> notesForStudent = notesMapping.get(id);
+        //for (int id : notesMapping.keySet()) {
+        for (Map.Entry<Integer, List<NoteEleve>> entry : notesMapping.entrySet()) {
+            int id = entry.getKey();
+            List<NoteEleve> notesForStudent = entry.getValue();
             double moy = 0;
             for (NoteEleve note : notesForStudent) {
                 moy += note.getNote();

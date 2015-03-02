@@ -4,7 +4,7 @@ public class MyString {
     private StringBuffer _sb;
 
     public MyString(String s) {
-        _sb = new StringBuffer(s);
+        setString(s);
     }
 
     public String getString() {

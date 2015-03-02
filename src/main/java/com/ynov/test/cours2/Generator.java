@@ -27,7 +27,7 @@ public class Generator {
         PrintWriter writer = new PrintWriter(new FileOutputStream("notes.csv"));
         for (int i = 0; i < 50; i++) {
             Person p = persons.get(r.nextInt(persons.size()));
-            long t = System.currentTimeMillis() - r.nextInt(60) * 24 * 60 * 60 * 1000L;
+            long t = System.currentTimeMillis() - ((long) r.nextInt(60)) * 24L * 60L * 60L * 1000L;
             double note = r.nextDouble() * 20;
             String line = String.format("%d;%s;%.2f;%s", p.id, p.name, note, df.format(t));
             writer.println(line);

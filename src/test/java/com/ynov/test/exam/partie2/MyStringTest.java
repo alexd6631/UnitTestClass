@@ -54,7 +54,7 @@ public class MyStringTest {
 
     @Test
     public void testIsPalindrome() throws Exception {
-        assertTrue(new MyString("kayak").isPalindrome());
+        assertTrue(new MyString("kayak kayak").isPalindrome());
         assertTrue(new MyString("radar").isPalindrome());
         assertFalse(new MyString("foobar").isPalindrome());
 
